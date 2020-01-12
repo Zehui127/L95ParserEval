@@ -1,0 +1,111 @@
+(|the:0_AT| |spy:1_NN1| |see+ed:2_VVD| |the:3_AT| |cop:4_NN1| |with:5_IW| |the:6_AT| |revolver:7_NN1| |.:8_.|) 1 ; (-8.052)
+gr-list: 1
+(|ncsubj| |see+ed:2_VVD| |spy:1_NN1| _)
+(|iobj| |see+ed:2_VVD| |with:5_IW|)
+(|dobj| |see+ed:2_VVD| |cop:4_NN1|)
+(|dobj| |with:5_IW| |revolver:7_NN1|)
+(|det| |revolver:7_NN1| |the:6_AT|)
+(|det| |cop:4_NN1| |the:3_AT|)
+(|det| |spy:1_NN1| |the:0_AT|)
+
+
+Zehui@ParserRunner:~/ParserRunner/scripts$ echo "^ The spy saw the cop with the telescope." | rasp_sentence=cat ./rasp.sh
+(|the:0_AT| |spy:1_NN1| |see+ed:2_VVD| |the:3_AT| |cop:4_NN1| |with:5_IW| |the:6_AT| |telescope:7_NN1| |.:8_.|) 1 ; (-8.052)
+gr-list: 1
+(|ncsubj| |see+ed:2_VVD| |spy:1_NN1| _)
+(|iobj| |see+ed:2_VVD| |with:5_IW|)
+(|dobj| |see+ed:2_VVD| |cop:4_NN1|)
+(|dobj| |with:5_IW| |telescope:7_NN1|)
+(|det| |telescope:7_NN1| |the:6_AT|)
+(|det| |cop:4_NN1| |the:3_AT|)
+(|det| |spy:1_NN1| |the:0_AT|)
+
+
+Zehui@ParserRunner:~/ParserRunner/scripts$ echo "^ The thieves stole all the paintings in the night." | rasp_sentence=cat ./rasp.sh
+(|the:0_AT| |thief+s:1_NN2| |steal+ed:2_VVD| |all:3_DB| |the:4_AT| |painting+s:5_NN2| |in:6_II| |the:7_AT| |night:8_NN1| |.:9_.|) 1 ; (-12.419)
+gr-list: 1
+(|ncsubj| |steal+ed:2_VVD| |thief+s:1_NN2| _)
+(|obj2| |steal+ed:2_VVD| |painting+s:5_NN2|)
+(|dobj| |steal+ed:2_VVD| |all:3_DB|)
+(|det| |painting+s:5_NN2| |the:4_AT|)
+(|ncmod| _ |painting+s:5_NN2| |in:6_II|)
+(|dobj| |in:6_II| |night:8_NN1|)
+(|det| |night:8_NN1| |the:7_AT|)
+(|det| |thief+s:1_NN2| |the:0_AT|)
+
+
+Zehui@ParserRunner:~/ParserRunner/scripts$ echo "^ The thieves stole all the paintings in the museum." | rasp_sentence=cat ./rasp.sh
+(|the:0_AT| |thief+s:1_NN2| |steal+ed:2_VVD| |all:3_DB| |the:4_AT| |painting+s:5_NN2| |in:6_II| |the:7_AT| |museum:8_NN1| |.:9_.|) 1 ; (-12.419)
+gr-list: 1
+(|ncsubj| |steal+ed:2_VVD| |thief+s:1_NN2| _)
+(|obj2| |steal+ed:2_VVD| |painting+s:5_NN2|)
+(|dobj| |steal+ed:2_VVD| |all:3_DB|)
+(|det| |painting+s:5_NN2| |the:4_AT|)
+(|ncmod| _ |painting+s:5_NN2| |in:6_II|)
+(|dobj| |in:6_II| |museum:8_NN1|)
+(|det| |museum:8_NN1| |the:7_AT|)
+(|det| |thief+s:1_NN2| |the:0_AT|)
+
+
+Zehui@ParserRunner:~/ParserRunner/scripts$ echo "^ I thought about his interest in the Volvo." | rasp_sentence=cat ./rasp.sh
+(|I:0_PPIS1| |think+ed:1_VVD| |about:2_II| |his:3_APP$| |interest:4_NN1| |in:5_II| |the:6_AT| |Volvo:7_NP1| |.:8_.|) 1 ; (-9.590)
+gr-list: 1
+(|ncsubj| |think+ed:1_VVD| |I:0_PPIS1| _)
+(|iobj| |think+ed:1_VVD| |about:2_II|)
+(|dobj| |about:2_II| |interest:4_NN1|)
+(|det| |interest:4_NN1| |his:3_APP$|)
+(|ncmod| _ |interest:4_NN1| |in:5_II|)
+(|dobj| |in:5_II| |Volvo:7_NP1|)
+(|det| |Volvo:7_NP1| |the:6_AT|)
+
+
+Zehui@ParserRunner:~/ParserRunner/scripts$ echo "^ Primary school facilities are designed carefully." | rasp_sentence=cat ./rasp.sh
+echo "^ Toy coffee grinder and cat food tin are different." | rasp_sentence=cat ./rasp.sh(|primary:0_JJ| |school:1_NNJ1| |facility+s:2_NN2| |be+:3_VBR| |design+ed:4_VVN| |carefully:5_RR| |.:6_.|) 1 ; (-11.034)
+gr-list: 1
+(|ncsubj| |design+ed:4_VVN| |facility+s:2_NN2| _)
+(|ncmod| _ |design+ed:4_VVN| |carefully:5_RR|)
+(|aux| |design+ed:4_VVN| |be+:3_VBR|)
+(|passive| |design+ed:4_VVN|)
+(|ncmod| _ |facility+s:2_NN2| |primary:0_JJ|)
+(|ncmod| _ |facility+s:2_NN2| |school:1_NNJ1|)
+
+
+Zehui@ParserRunner:~/ParserRunner/scripts$ echo "^ Toy coffee grinder and cat food tin are different." | rasp_sentence=cat ./rasp.sh
+(|Toy:0_NP1| |coffee:1_NN1| |grinder:2_NN1| |and:3_CC| |cat:4_NN1| |food:5_NN1| |tin:6_NN1| |be+:7_VBR| |different:8_JJ| |.:9_.|) 1 ; (-13.316)
+gr-list: 1
+(|ncsubj| |be+:7_VBR| |and:3_CC| _)
+(|xcomp| _ |be+:7_VBR| |different:8_JJ|)
+(|ncmod| _ |and:3_CC| |Toy:0_NP1|)
+(|ncmod| _ |and:3_CC| |coffee:1_NN1|)
+(|conj| |and:3_CC| |grinder:2_NN1|)
+(|conj| |and:3_CC| |tin:6_NN1|)
+(|ncmod| _ |tin:6_NN1| |cat:4_NN1|)
+(|ncmod| _ |tin:6_NN1| |food:5_NN1|)
+
+
+Zehui@ParserRunner:~/ParserRunner/scripts$ echo "^ English also has many words of more or less unique function" | rasp_sentence=cat ./rasp.sh
+(|english:0_JJ| |also:1_RR| |have+s:2_VHZ| |many:3_DA2| |word+s:4_NN2| |of:5_IO| |more:6_DAR| |or:7_CC| |less:8_DAR| |unique:9_JJ| |function:10_NN1|) 0 ; ()
+gr-list: 1
+(|ncmod| _ |have+s:2_VHZ| |also:1_RR|)
+(|dobj| |have+s:2_VHZ| |word+s:4_NN2|)
+(|ncmod| _ |word+s:4_NN2| |many:3_DA2|)
+(|iobj| |word+s:4_NN2| |of:5_IO|)
+(|dobj| |of:5_IO| |function:10_NN1|)
+(|ncmod| _ |function:10_NN1| |or:7_CC|)
+(|ncmod| _ |function:10_NN1| |unique:9_JJ|)
+(|conj| |or:7_CC| |more:6_DAR|)
+(|conj| |or:7_CC| |less:8_DAR|)
+
+
+Zehui@ParserRunner:~/ParserRunner/scripts$ echo "^ English have negatives (no, not)." | rasp_sentence=cat ./rasp.sh
+(|english:0_NN2| |have:1_VH0| |negative+s:2_NN2| |(:3_(| |no:4_UH| |,:5_,| |not+:6_XX| |):7_)| |.:8_.|) 0 ; ()
+gr-list: 1
+(|ncsubj| |have:1_VH0| |english:0_NN2| _)
+(|dobj| |have:1_VH0| |negative+s:2_NN2|)
+
+
+Zehui@ParserRunner:~/ParserRunner/scripts$ echo "^ English have negatives ( no, not )." | rasp_sentence=cat ./rasp.sh
+(|english:0_NN2| |have:1_VH0| |negative+s:2_NN2| |(:3_(| |no:4_UH| |,:5_,| |not+:6_XX| |):7_)| |.:8_.|) 0 ; ()
+gr-list: 1
+(|ncsubj| |have:1_VH0| |english:0_NN2| _)
+(|dobj| |have:1_VH0| |negative+s:2_NN2|)

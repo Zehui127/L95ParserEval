@@ -1,0 +1,1 @@
+java -cp stanford-parser.jar edu.stanford.nlp.parser.lexparser.LexicalizedParser -originalDependencies -outputFormat "conll2007" -writeOutputFiles -model edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testFile.txt
